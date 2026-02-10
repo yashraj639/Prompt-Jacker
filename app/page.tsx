@@ -90,7 +90,6 @@ export default function Home() {
           <PromptDisplay prompt={prompt} hint={hint} error={error} />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
