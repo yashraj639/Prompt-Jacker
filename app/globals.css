@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-ink text-white font-sans;
+  min-height: 100vh;
+  background-image: theme('backgroundImage.hero-glow');
+}
+
+::selection {
+  background: rgba(55, 247, 209, 0.25);
+  color: #ffffff;
+}
+
+.noise-layer {
+  background-image: theme('backgroundImage.noise');
+  mix-blend-mode: soft-light;
+  opacity: 0.35;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(26,26,36,0.9), rgba(12,12,20,0.8));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+.tag {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-mist;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #37f7d1, #ff4fd8, #f5c56b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
